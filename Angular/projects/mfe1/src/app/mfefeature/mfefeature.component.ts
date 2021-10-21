@@ -11,11 +11,6 @@ export class MfefeatureComponent implements OnInit {
   constructor(public service: SharedLibService) { }
 
   ngOnInit(): void {
-    console.log(this.service.getState)
-    this.service.setState(4);
-    console.log(this.service.getState)
-
-    
   }
 
 }
