@@ -8,6 +8,12 @@
         <a style="padding: 0 10px;" routerLink='/mfe2'>Link to MFE 2</a>
 
     </div>
+    <div style="padding: 10px 0;">
+       Shared Number: {{service.getState}}
+    </div>
+    <button style="background-color: greenyellow; border: none; padding: 5px 20px; cursor: pointer; border-radius: 10px;" (click)="service.setState(service.getState + 1)">
+        Add number
+    </button>
     
     <router-outlet></router-outlet>
 </div>

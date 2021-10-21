@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedLibService } from 'shared-lib';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'host';
+
+  constructor(public service: SharedLibService){
+    this.service.setState(2);
+  }
 }

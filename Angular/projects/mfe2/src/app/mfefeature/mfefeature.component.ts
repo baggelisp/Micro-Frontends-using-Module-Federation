@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MfefeatureComponent implements OnInit {
 
+  counter = 0;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  addCounter() {
+    this.counter = this.counter + 1
+  }
+  
 
 }

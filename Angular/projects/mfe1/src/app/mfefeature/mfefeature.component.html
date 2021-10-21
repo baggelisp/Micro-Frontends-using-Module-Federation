@@ -6,8 +6,16 @@
     min-height: 300px;
 ">
     <p>Micro Front End 1 Module Here</p>
+    <div>
+        <a routerLink='/'>Home</a> &#160;
+        <a routerLink='/mfe1'>Link to MFE 1</a>
+        <a routerLink='/mfe2'>Link to MFE 2</a>
+    </div>
+    <div style="padding: 10px 0;">
+        Shared Number:  {{service.getState}}
+    </div>
+    <button style="background-color: rgb(255, 106, 47); border: none; padding: 5px 20px; cursor: pointer; border-radius: 10px;" (click)="service.setState(service.getState + 1)">
+        Add number
+    </button>
 
-    <a routerLink='/'>Home</a> &#160;
-    <a routerLink='/mfe1'>Link to MFE 1</a>
-    <a routerLink='/mfe2'>Link to MFE 2</a>
 </div>
