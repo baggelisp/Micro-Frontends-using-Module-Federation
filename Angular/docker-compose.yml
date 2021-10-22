@@ -1,0 +1,20 @@
+version: '3'
+services:
+  host:
+    build:
+      context: .
+      dockerfile: HostDockerfile
+    ports:
+      - 4200:80
+  mfe1:
+    build:
+      context: .
+      dockerfile: Mfe1Dockerfile
+    ports:
+      - 5000:80
+  mfe2:
+    build:
+      context: .
+      dockerfile: Mfe2Dockerfile
+    ports:
+      - 5001:80

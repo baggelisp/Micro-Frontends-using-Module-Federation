@@ -4,11 +4,11 @@ COPY package.json  ./
 
 RUN yarn install 
 
-RUN mkdir /mfe-app
+RUN mkdir /mfe2-app
 
-RUN mv ./node_modules ./mfe-app
+RUN mv ./node_modules ./mfe2-app
 
-WORKDIR /mfe-app
+WORKDIR /mfe2-app
 
 COPY . .
 
@@ -16,6 +16,6 @@ RUN npm run ng build --prod --project=mfe2
 
 FROM nginx
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /mfe-app/dist/mfe2 /usr/share/nginx/html
+COPY --from=builder /mfe2-app/dist/mfe2 /usr/share/nginx/html
 
 CMD ["nginx", "-g", "daemon off;"]
